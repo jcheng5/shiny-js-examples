@@ -1,5 +1,6 @@
 library(shiny)
 
+# To be called from ui.R
 lineChartOutput <- function(inputId, width="100%", height="400px") {
   style <- sprintf("width: %s; height: %s;",
     validateCssUnit(width), validateCssUnit(height))
@@ -20,6 +21,7 @@ lineChartOutput <- function(inputId, width="100%", height="400px") {
   )
 }
 
+# To be called from server.R
 renderLineChart <- function(expr, env=parent.frame(), quoted=FALSE) {
   # This piece of boilerplate converts the expression `expr` into a
   # function called `func`. It's needed for the RStudio IDE's built-in
