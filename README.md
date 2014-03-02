@@ -9,3 +9,11 @@ An adaptation of the [NVD3.js](http://nv3d.org/) charting library's [Simple Line
 Run this example by calling:
 
 `shiny::runGitHub("shiny-js-examples", "jcheng5", subdir="output")`
+
+## Input example
+
+Demonstrates creating a custom Shiny input binding for a simple JavaScript-enabled "dueling select box" input widget.
+
+Run this example by calling:
+
+`shiny::runGitHub("shiny-js-examples", "jcheng5", subdir="input")`
