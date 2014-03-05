@@ -62,7 +62,7 @@ binding.renderValue = function(el, data) {
   nv.addGraph(function() {
     // Update the chart
     state.selection
-      .datum(reshapeData(data))
+      .datum(data)
       .transition(500)
       .call(state.chart);
     return state.chart;
@@ -71,38 +71,5 @@ binding.renderValue = function(el, data) {
 
 // Tell Shiny about our new output binding
 Shiny.outputBindings.register(binding, "shinyjsexamples.nvd3-linechart");
-
-
-/**
- * Data comes in as:
- * 
- * {
- *   "Series A": [1,2,3,4,5],
- *   "Series B": [6,7,8,9,10]
- * }
- * 
- * D3 expects:
- * 
- * [
- *   {
- *     key: "Series A",
- *     values: [{x:1,y:1}, {x:2,y:2}, {x:3,y:3}, {x:4,y:4}, {x:5,y:5}]
- *   },
- *   {
- *     key: "Series B",
- *     values: [{x:1,y:6}, {x:2,y:7}, {x:3,y:8}, {x:4,y:9}, {x:5,y:10}]
- *   }
- * ]
- */
-function reshapeData(data) {
-  return $.map(data, function(value, key) {
-    return {
-      values: $.map(value, function(y, x) {
-        return {x: x, y: y}
-      }),
-      key: key
-    };
-  });
-}
 
 })();
