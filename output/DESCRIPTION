@@ -1,4 +1,8 @@
 Title: Simple Line Chart
 Author: Joe Cheng <joe@rstudio.com>
-License: CC0 1.0 Universal or public domain
+AuthorUrl: http://www.rstudio.com/
+License: MIT
 Type: Shiny
+Tags: custom-output nvd3 d3 javascript
+DisplayMode: Showcase
+
