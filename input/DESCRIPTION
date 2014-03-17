@@ -1,4 +1,7 @@
 Title: Chooser Demo
 Author: Joe Cheng <joe@rstudio.com>
-License: CC0 1.0 Universal or public domain
+AuthorUrl: http://www.rstudio.com/
+License: MIT
 Type: Shiny
+Tags: javascript custom-input
+DisplayMode: Normal
